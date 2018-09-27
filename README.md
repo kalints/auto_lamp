@@ -14,6 +14,11 @@ sudo salt '*' test.ping
 ## Install package by applying configuration file from the master to all minions
 
 ```
-sudo ln -s /vagrant/saltstack /srv/salt
+sudo ln -s /vagrant/saltstack/srv /srv/salt
+sudo cp -r /vagrant/saltstack/etc_salt/* /etc/salt/
 sudo salt '*' state.apply mydev
 ```
+
+## Ideas for how to build DO instances and configure them
+
+https://www.digitalocean.com/community/tutorials/saltstack-infrastructure-configuring-salt-cloud-to-spin-up-digitalocean-resources
