@@ -3,8 +3,10 @@
 ## Apply SLS defined state
 
 ```
-sudo salt '*' test.ping
-sudo salt '*' state.apply mydev
+sudo su -
+salt '*' test.ping
+salt '*' state.apply mydev
+salt '*' state.highstate
 ```
 
 ## Ideas for how to build DO instances and configure them
