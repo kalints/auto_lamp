@@ -2,6 +2,29 @@
 
 ## Docs
 
+### Bootstrap a new master/minion node
+
+- Master
+
+```
+curl -L https://bootstrap.saltstack.com | bash -s -- -M
+```
+
+- Minion
+
+```
+curl -L https://bootstrap.saltstack.com | bash
+```
+
+### Configure master/minion node
+
+- Install both master and minion
+- Configure minion to use localhost master by adding 'master: 127.0.0.1' to /etc/salt/minion
+- Accept key using 'salt-key -A' and restart master and minion using systemd
+- Populate /srv with the /srv/pillar and /srv/salt content from the repo.
+- Update /srv/salt/top.sls with the server name
+- salt '*' state.highstate
+
 ### Apply SLS defined state
 
 ```
