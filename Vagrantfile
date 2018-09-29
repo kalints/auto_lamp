@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  os = "ubuntu/xenial64"
+  os = "ubuntu/bionic64"
   net_ip = "192.168.50"
 
   config.vm.define :master, primary: true do |master_config|
